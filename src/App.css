@@ -161,3 +161,10 @@ p {
   color: #ff0000;
   margin-top: 10px;
 }
+
+#title{
+  color: wheat;
+  padding: 1em;
+  text-transform: capitalize;
+  opacity: .2;
+}

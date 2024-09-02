@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import CryptoJS from "crypto-js";
+import { TypeAnimation } from 'react-type-animation';
 
 const SECRET_PASS = "XkhZG4fW2t2W";
 
@@ -64,6 +65,27 @@ function App() {
 
   return (
     <div className="container">
+
+<TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Welcome to Codek',
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'A framework',
+        1000,
+        'for cloud',
+        1000,
+        'mobile security ',
+        1000,
+        'system',
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      style={{ fontSize: '2em', display: 'inline-block', color:"white", textTransform:"capitalize", padding:"1em" }}
+      repeat={Infinity}
+      className="title"
+    />
       <div className="actions">
         {/* Buttons to switch between Encrypt and Decrypt screens */}
         <button
@@ -113,6 +135,8 @@ function App() {
           <p>{screen === "encrypt" ? encrptedData : decrptedData}</p>
         </div>
       ) : null}
+      
+    <marquee behavior="" direction="">   <h2 id="title"> A framework for cloud mobile security system</h2></marquee>
     </div>
   );
 }
